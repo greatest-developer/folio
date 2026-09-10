@@ -1,6 +1,1007 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-    <title>Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napawarid Charoenprasertkul - Tech Lead & Solution Architect Resume</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js for Visual Skill Metrics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#2563eb',
+                            600: '#1d4ed8',
+                            700: '#1e40af',
+                            800: '#1e3a8a',
+                            900: '#0f172a',
+                            accent: '#06b6d4',
+                            emerald: '#10b981'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Inter', 'Prompt', sans-serif;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card-hover:hover {
+            transform: translateY(-3px);
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 12px 30px -10px rgba(37, 99, 235, 0.25);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.6);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(59, 130, 246, 0.4);
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(59, 130, 246, 0.7);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 50%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .badge-glow {
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
+        }
+    </style>
 </head>
-<body><h1>Test Folio1</h1></body>
+<body class="custom-scrollbar min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white">
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-slate-900/85 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center font-bold text-lg text-white shadow-lg">
+                    NC
+                </div>
+                <div>
+                    <h1 class="font-bold text-base sm:text-lg leading-tight">Napawarid C.</h1>
+                    <p class="text-xs text-cyan-400 font-medium">Tech Lead & Solution Architect</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium">
+                <a href="#summary" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Summary</a>
+                <a href="#skills" class="px-3 py-1.5 rounded-lg text-cyan-400 font-semibold bg-cyan-950/40 border border-cyan-800/40 hover:bg-cyan-900/50 transition">
+                    <i class="fa-solid fa-code-branch mr-1.5 text-xs"></i> Skills Matrix
+                </a>
+                <a href="#experience" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Experience (18 Yrs)</a>
+                <a href="#projects" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Key Projects</a>
+                <a href="#education" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Education</a>
+            </nav>
+
+            <div class="flex items-center space-x-2">
+                <a href="https://1drv.ms/w/s!AICAvKbnAudXgvxG44474Rxvft9E_g?e=UytUFk" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-slate-700 transition">
+                    <i class="fa-solid fa-folder-open mr-1.5"></i> OneDrive Portfolio
+                </a>
+                <a href="mailto:pro.it@windowslive.com" class="inline-flex items-center px-3.5 py-1.5 text-xs font-bold rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white shadow-md transition">
+                    <i class="fa-solid fa-paper-plane mr-1.5"></i> Contact
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="summary" class="relative py-12 md:py-16 overflow-hidden">
+            <!-- Background Glows -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-10 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Left Hero Details -->
+                    <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-950/80 border border-blue-700/50 text-xs font-medium text-blue-300">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span>18 Years of Experience (2008 - Present)</span>
+                        </div>
+
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                            Napawarid Charoenprasertkul <br>
+                            <span class="gradient-text">Tech Lead & Solution Architect</span>
+                        </h1>
+
+                        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
+                            Enterprise-grade Solution Architect & Tech Lead specializing in <strong class="text-white font-medium">Clean Architecture, Microservices</strong>, and engineering squad leadership using <strong class="text-white font-medium">Agile/Scrum Frameworks</strong>. 18 years of proven track record across Banking, FinTech, and Enterprise CRM platforms.
+                        </p>
+
+                        <!-- Highlights Quick Badges -->
+                        <div class="flex flex-wrap gap-2 justify-center lg:justify-start pt-2">
+                            <span class="px-3 py-1 text-xs font-semibold rounded-md bg-slate-800/80 text-blue-300 border border-slate-700">
+                                <i class="fa-solid fa-shield-halved mr-1 text-cyan-400"></i> Banking & FinTech Systems
+                            </span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-md bg-slate-800/80 text-blue-300 border border-slate-700">
+                                <i class="fa-solid fa-sitemap mr-1 text-cyan-400"></i> Solution & API Architecture
+                            </span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-md bg-slate-800/80 text-blue-300 border border-slate-700">
+                                <i class="fa-solid fa-users-gear mr-1 text-cyan-400"></i> Agile Squad Management
+                            </span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-md bg-slate-800/80 text-blue-300 border border-slate-700">
+                                <i class="fa-solid fa-robot mr-1 text-cyan-400"></i> AI-Driven Engineering
+                            </span>
+                        </div>
+
+                        <!-- Contact Quick Links -->
+                        <div class="pt-4 flex flex-wrap justify-center lg:justify-start gap-4 text-xs sm:text-sm text-slate-300">
+                            <a href="tel:0843548375" class="flex items-center hover:text-cyan-400 transition bg-slate-800/50 px-3 py-1.5 rounded-lg border border-slate-700">
+                                <i class="fa-solid fa-phone text-cyan-400 mr-2"></i> +66 84-354-8375
+                            </a>
+                            <a href="mailto:pro.it@windowslive.com" class="flex items-center hover:text-cyan-400 transition bg-slate-800/50 px-3 py-1.5 rounded-lg border border-slate-700">
+                                <i class="fa-solid fa-envelope text-cyan-400 mr-2"></i> pro.it@windowslive.com
+                            </a>
+                            <span class="flex items-center bg-slate-800/50 px-3 py-1.5 rounded-lg border border-slate-700">
+                                <i class="fa-brands fa-line text-emerald-400 mr-2"></i> salityitguy
+                            </span>
+                            <span class="flex items-center bg-slate-800/50 px-3 py-1.5 rounded-lg border border-slate-700">
+                                <i class="fa-solid fa-location-dot text-rose-400 mr-2"></i> Phasricharoen, Bangkok (Near MRT)
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Right Key Stats Cards -->
+                    <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                        <div class="glass-card p-5 rounded-2xl text-center border-t-2 border-t-blue-500">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-blue-400">18+</div>
+                            <div class="text-xs sm:text-sm text-slate-300 mt-1 font-medium">Years Experience</div>
+                            <p class="text-[11px] text-slate-400 mt-1">Developer to Tech Lead</p>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl text-center border-t-2 border-t-cyan-400">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-cyan-300">3.55</div>
+                            <div class="text-xs sm:text-sm text-slate-300 mt-1 font-medium">Master's GPA</div>
+                            <p class="text-[11px] text-slate-400 mt-1">MBA-OGM KMUTT</p>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl text-center border-t-2 border-t-emerald-400">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">15+</div>
+                            <div class="text-xs sm:text-sm text-slate-300 mt-1 font-medium">Enterprises & Projects</div>
+                            <p class="text-[11px] text-slate-400 mt-1">TTB, BAY, Accenture, SEC</p>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl text-center border-t-2 border-t-purple-400">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-purple-300">Full</div>
+                            <div class="text-xs sm:text-sm text-slate-300 mt-1 font-medium">Stack & AI DevOps</div>
+                            <p class="text-[11px] text-slate-400 mt-1">End-to-End Delivery</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS MATRIX SECTION (PRIMARY FOCUS) -->
+        <section id="skills" class="py-12 bg-slate-900/90 relative border-t border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Title & Intro -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-slate-800">
+                    <div>
+                        <div class="inline-flex items-center space-x-2 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-2">
+                            <i class="fa-solid fa-microchip"></i> Core Competencies & Tech Stack
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-bold">Technical Skills Matrix</h2>
+                        <p class="text-slate-400 text-sm mt-1">Comprehensive overview across Software Architecture, Development, Databases, AI Tools, and Project Management.</p>
+                    </div>
+
+                    <!-- Search Box for Skills -->
+                    <div class="mt-4 md:mt-0 relative w-full md:w-72">
+                        <input type="text" id="skillSearch" onkeyup="filterSkills()" placeholder="Search skills e.g., .NET, Microservices..." class="w-full bg-slate-800 border border-slate-700 text-xs sm:text-sm rounded-xl pl-9 pr-4 py-2.5 text-slate-200 placeholder-slate-400 focus:outline-none focus:border-cyan-500 transition">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Skill Filter Tabs -->
+                <div class="flex flex-wrap gap-2 mb-8" id="skillTabs">
+                    <button onclick="filterCategory('all')" class="skill-tab active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-blue-600 text-white shadow-md transition">
+                        All Skills
+                    </button>
+                    <button onclick="filterCategory('arch')" class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+                        <i class="fa-solid fa-cubes text-cyan-400 mr-1.5"></i> Architecture & Design
+                    </button>
+                    <button onclick="filterCategory('dev')" class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+                        <i class="fa-solid fa-code text-emerald-400 mr-1.5"></i> Backend & Frontend
+                    </button>
+                    <button onclick="filterCategory('db')" class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+                        <i class="fa-solid fa-database text-amber-400 mr-1.5"></i> Database & Big Data
+                    </button>
+                    <button onclick="filterCategory('devops')" class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+                        <i class="fa-solid fa-cloud text-purple-400 mr-1.5"></i> DevOps & Cloud
+                    </button>
+                    <button onclick="filterCategory('testing')" class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+                        <i class="fa-solid fa-vial-circle-check text-rose-400 mr-1.5"></i> QA & Automation Testing
+                    </button>
+                    <button onclick="filterCategory('ai')" class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+                        <i class="fa-solid fa-brain text-indigo-400 mr-1.5"></i> AI Tools & Copilot
+                    </button>
+                    <button onclick="filterCategory('pm')" class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+                        <i class="fa-solid fa-list-check text-teal-400 mr-1.5"></i> Agile & Management
+                    </button>
+                </div>
+
+                <!-- Skill Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="skillsGrid">
+
+                    <!-- Category 1: Architecture & Software Concepts -->
+                    <div class="skill-card glass-card glass-card-hover p-6 rounded-2xl" data-category="arch">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-500/20 flex items-center justify-center text-cyan-400 border border-cyan-500/30">
+                                    <i class="fa-solid fa-diagram-project text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-base text-white">Software Architecture</h3>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-300 font-semibold border border-cyan-800">Advanced</span>
+                        </div>
+                        <p class="text-xs text-slate-300 mb-4">Enterprise-grade system design emphasizing scalability, high availability, and robust security.</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700">Clean Architecture</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700">Microservice Architecture</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700">API First Approach</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700">Dependency Injection</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700">Service Layer Pattern</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700">Repository Pattern</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700">Open API / Swagger</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700">SOA / OOP / MVVM / MVC</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Backend Development -->
+                    <div class="skill-card glass-card glass-card-hover p-6 rounded-2xl" data-category="dev">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 border border-blue-500/30">
+                                    <i class="fa-solid fa-server text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-base text-white">Backend Engineering (.NET)</h3>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-blue-950 text-blue-300 font-semibold border border-blue-800">Expert (18 Yrs)</span>
+                        </div>
+                        <p class="text-xs text-slate-300 mb-4">High-throughput, secure server-side development and API design using the .NET ecosystem.</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-blue-300 border border-slate-700">C# / .NET Core / Framework</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-blue-300 border border-slate-700">RESTful Web API</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-blue-300 border border-slate-700">Node.js</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-blue-300 border border-slate-700">Java</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-blue-300 border border-slate-700">Linq & Entity Framework</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-blue-300 border border-slate-700">Dapper ORM</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-blue-300 border border-slate-700">WCF & WPF</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-blue-300 border border-slate-700">NPOI Library</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Frontend Development -->
+                    <div class="skill-card glass-card glass-card-hover p-6 rounded-2xl" data-category="dev">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 border border-emerald-500/30">
+                                    <i class="fa-solid fa-desktop text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-base text-white">Frontend Web & Mobile App</h3>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-300 font-semibold border border-emerald-800">Advanced</span>
+                        </div>
+                        <p class="text-xs text-slate-300 mb-4">Web portals, backoffice admin dashboards, and dynamic user interfaces.</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-emerald-300 border border-slate-700">Angular (Angular 7-8+)</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-emerald-300 border border-slate-700">VueJS</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-emerald-300 border border-slate-700">JavaScript / DOM / jQuery</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-emerald-300 border border-slate-700">Bootstrap / Tailwind CSS</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-emerald-300 border border-slate-700">HTML5 / Web Controls</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: Database & Search Engine -->
+                    <div class="skill-card glass-card glass-card-hover p-6 rounded-2xl" data-category="db">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center text-amber-400 border border-amber-500/30">
+                                    <i class="fa-solid fa-database text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-base text-white">Database & Search Engine</h3>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-amber-950 text-amber-300 font-semibold border border-amber-800">Expert</span>
+                        </div>
+                        <p class="text-xs text-slate-300 mb-4">Relational & NoSQL database design, Stored Procedure optimization, and caching strategies.</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-amber-300 border border-slate-700">MSSQL Server</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-amber-300 border border-slate-700">PostgreSQL</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-amber-300 border border-slate-700">Oracle Database</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-amber-300 border border-slate-700">MongoDB</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-amber-300 border border-slate-700">ElasticSearch</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-amber-300 border border-slate-700">Redis Cache</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-amber-300 border border-slate-700">Stored Procedure Tuning</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-amber-300 border border-slate-700">ETL Pipeline & Logstash</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 5: DevOps & Cloud Infrastructure -->
+                    <div class="skill-card glass-card glass-card-hover p-6 rounded-2xl" data-category="devops">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 border border-purple-500/30">
+                                    <i class="fa-solid fa-cloud-arrow-up text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-base text-white">DevOps & Cloud Platforms</h3>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-purple-950 text-purple-300 font-semibold border border-purple-800">Advanced</span>
+                        </div>
+                        <p class="text-xs text-slate-300 mb-4">Continuous Integration/Delivery pipeline automation and containerized application management.</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Microsoft Azure Cloud</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Azure DevOps</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">OpenShift Container</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Google Kubernetes (K8s)</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Jenkins Automation</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">GitLab CI/CD & Git</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Argo CD</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Bitbucket / GitHub</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 6: QA & Testing Automation -->
+                    <div class="skill-card glass-card glass-card-hover p-6 rounded-2xl" data-category="testing">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-xl bg-rose-500/20 flex items-center justify-center text-rose-400 border border-rose-500/30">
+                                    <i class="fa-solid fa-bug text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-base text-white">Testing & Quality Assurance</h3>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-rose-950 text-rose-300 font-semibold border border-rose-800">Experienced</span>
+                        </div>
+                        <p class="text-xs text-slate-300 mb-4">Unit testing frameworks, API performance testing, and automated end-to-end testing.</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-rose-300 border border-slate-700">Robot Framework</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-rose-300 border border-slate-700">Selenium Automation</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-rose-300 border border-slate-700">Postman (API & Perf Test)</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-rose-300 border border-slate-700">xUnit / NUnit</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-rose-300 border border-slate-700">SonarQube Code Analysis</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 7: AI Assisted Engineering -->
+                    <div class="skill-card glass-card glass-card-hover p-6 rounded-2xl" data-category="ai">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 border border-indigo-500/30">
+                                    <i class="fa-solid fa-brain text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-base text-white">AI Tools for Development</h3>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-indigo-950 text-indigo-300 font-bold border border-indigo-800">Modern Tech</span>
+                        </div>
+                        <p class="text-xs text-slate-300 mb-4">Accelerating development velocity, code reviews, architectural planning, and refactoring with AI.</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-indigo-300 border border-slate-700">GitHub Copilot</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-indigo-300 border border-slate-700">Claude Code</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-indigo-300 border border-slate-700">ChatGPT</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-indigo-300 border border-slate-700">Google Gemini</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 8: Agile, Delivery & Project Management -->
+                    <div class="skill-card glass-card glass-card-hover p-6 rounded-2xl" data-category="pm">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-xl bg-teal-500/20 flex items-center justify-center text-teal-400 border border-teal-500/30">
+                                    <i class="fa-solid fa-people-roof text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-base text-white">Agile & Squad Management</h3>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-teal-950 text-teal-300 font-semibold border border-teal-800">Tech Lead / SA</span>
+                        </div>
+                        <p class="text-xs text-slate-300 mb-4">Scrum Master & Tech Leadership, sprint release planning, backlog grooming, and risk control.</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 border border-slate-700">Agile / Scrum / Kanban</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 border border-slate-700">Squad Leading & Grooming</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 border border-slate-700">Jira / Confluence / Trello</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 border border-slate-700">CMMI & ISO Frameworks</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 border border-slate-700">MS Project / Roadmap Planning</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 9: Software Design Tools & Documentation -->
+                    <div class="skill-card glass-card glass-card-hover p-6 rounded-2xl" data-category="arch">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-500/20 flex items-center justify-center text-cyan-400 border border-cyan-500/30">
+                                    <i class="fa-solid fa-pen-ruler text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-base text-white">Design & Technical Specs</h3>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-300 font-semibold border border-cyan-800">Advanced</span>
+                        </div>
+                        <p class="text-xs text-slate-300 mb-4">Authoring technical documentation: SRS, SDD, ER Diagrams, Process Flows, and Sequence Diagrams.</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700">Figma Wireframing</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700">Draw.io & Visio</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700">API Documentation (Postman)</span>
+                            <span class="skill-tag text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700">Use Case & Detailed Specs</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Skill Summary Chart Section -->
+                <div class="mt-12 glass-card p-6 sm:p-8 rounded-2xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-5 space-y-4">
+                            <h3 class="text-xl font-bold text-white flex items-center">
+                                <i class="fa-solid fa-chart-pie text-cyan-400 mr-2"></i> Technical Competency Distribution
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                                Backed by over 18 years of progressive IT experience, combining strategic <strong>Technical Leadership</strong>, <strong>Architecture Design</strong>, and <strong>Hands-on Development</strong>.
+                            </p>
+                            <div class="space-y-2 pt-2">
+                                <div>
+                                    <div class="flex justify-between text-xs text-slate-300 mb-1">
+                                        <span>.NET C# & Software Architecture</span>
+                                        <span class="text-cyan-400 font-bold">95%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-cyan-400 h-full rounded-full" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs text-slate-300 mb-1">
+                                        <span>System Analysis & Banking API Design</span>
+                                        <span class="text-blue-400 font-bold">90%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-blue-400 h-full rounded-full" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs text-slate-300 mb-1">
+                                        <span>Database Design & Query Tuning</span>
+                                        <span class="text-amber-400 font-bold">88%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-amber-400 h-full rounded-full" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs text-slate-300 mb-1">
+                                        <span>Agile Squad Leadership & Coaching</span>
+                                        <span class="text-emerald-400 font-bold">90%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-emerald-400 h-full rounded-full" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Chart Container -->
+                        <div class="lg:col-span-7 flex justify-center">
+                            <div class="w-full max-w-md h-64 sm:h-72">
+                                <canvas id="skillRadarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EXPERIENCE & CAREER TIMELINE -->
+        <section id="experience" class="py-12 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <div class="inline-flex items-center space-x-2 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-briefcase"></i> Work Experience Timeline
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold">Work History & Career Progression (18 Years)</h2>
+                    <p class="text-slate-400 text-sm mt-1">Continuous advancement from Programmer to Senior System Analyst and Banking Tech Lead.</p>
+                </div>
+
+                <!-- Timeline List -->
+                <div class="space-y-6 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:-ml-px before:w-0.5 before:bg-slate-800">
+
+                    <!-- Role 1: TTB Tech Lead -->
+                    <div class="relative flex items-center md:justify-between group">
+                        <div class="flex items-center justify-center w-9 h-9 rounded-full bg-blue-600 text-white font-bold text-xs shadow-lg shrink-0 z-10 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <div class="w-full md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl ml-4 md:ml-0 border-l-4 border-l-blue-500">
+                            <div class="flex flex-wrap justify-between items-center mb-2">
+                                <span class="px-2.5 py-0.5 rounded text-[11px] font-extrabold bg-blue-900/60 text-blue-300 border border-blue-700">1 Jul 2023 – Present</span>
+                                <span class="text-xs text-slate-400"><i class="fa-solid fa-location-dot mr-1 text-rose-400"></i>Bangkok</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Tech Lead</h3>
+                            <p class="text-sm text-cyan-400 font-medium mb-3">TMBThanachart Bank Public Company Limited (TTB)</p>
+                            <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside mb-4">
+                                <li>Architected Application & Solution Architecture for the Bizone corporate banking platform.</li>
+                                <li>Served as Scrum Master driving Agile teams, managing project timelines, resources, and Go-Live releases.</li>
+                                <li>Managed incident resolution and provided technical guidance for SA, QA, and Development teams.</li>
+                            </ul>
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <p class="text-[11px] font-semibold text-slate-300 mb-1">Key Delivered Projects:</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-blue-950 text-blue-200">Stop-cheque</span>
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-blue-950 text-blue-200">TD Deposit & Withdraw</span>
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-blue-950 text-blue-200">Cash Withdrawal</span>
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-blue-950 text-blue-200">EDC & QR Report</span>
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-blue-950 text-blue-200">Bill Payment</span>
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-blue-950 text-blue-200">Online Cheque Book</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 2: PersolKelly (Accenture) -->
+                    <div class="relative flex items-center md:justify-between group">
+                        <div class="flex items-center justify-center w-9 h-9 rounded-full bg-cyan-600 text-white font-bold text-xs shadow-lg shrink-0 z-10 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+                        <div class="w-full md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl ml-4 md:ml-0 border-l-4 border-l-cyan-500">
+                            <div class="flex flex-wrap justify-between items-center mb-2">
+                                <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-slate-800 text-slate-300">1 Nov 2022 – 30 Jun 2023</span>
+                                <span class="text-xs text-slate-400">Onsite: Accenture</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Application Designer (Outsource)</h3>
+                            <p class="text-sm text-cyan-400 font-medium mb-3">PersolKelly</p>
+                            <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside mb-3">
+                                <li>Authored High-Level Solution Designs, database schemas, and detailed technical specifications.</li>
+                                <li>Facilitated Agile grooming and sprint retrospective sessions for development squads.</li>
+                            </ul>
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <p class="text-[11px] font-semibold text-slate-300 mb-1">Key Delivered Projects:</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-cyan-950 text-cyan-200">TungNern Credit Card</span>
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-cyan-950 text-cyan-200">TungNern Web Admin & Portal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 3: X10 IT Consulting (BAY) -->
+                    <div class="relative flex items-center md:justify-between group">
+                        <div class="flex items-center justify-center w-9 h-9 rounded-full bg-amber-600 text-white font-bold text-xs shadow-lg shrink-0 z-10 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <div class="w-full md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl ml-4 md:ml-0 border-l-4 border-l-amber-500">
+                            <div class="flex flex-wrap justify-between items-center mb-2">
+                                <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-slate-800 text-slate-300">1 Jul 2022 – 31 Oct 2022</span>
+                                <span class="text-xs text-slate-400">Onsite: Bank of Krungsri (BAY)</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Senior System Analyst</h3>
+                            <p class="text-sm text-cyan-400 font-medium mb-3">X10 IT Consulting</p>
+                            <p class="text-xs text-slate-300 mb-2">Gathered business requirements, analyzed workflows, and designed UX process flows for core credit loan systems.</p>
+                            <div class="flex flex-wrap gap-1 mt-2">
+                                <span class="text-[10px] px-2 py-0.5 rounded bg-amber-950 text-amber-200">Loan Systems</span>
+                                <span class="text-[10px] px-2 py-0.5 rounded bg-amber-950 text-amber-200">Repayment Flow</span>
+                                <span class="text-[10px] px-2 py-0.5 rounded bg-amber-950 text-amber-200">Loan Support Portal</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 4: Gofive Co., Ltd. -->
+                    <div class="relative flex items-center md:justify-between group">
+                        <div class="flex items-center justify-center w-9 h-9 rounded-full bg-emerald-600 text-white font-bold text-xs shadow-lg shrink-0 z-10 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div class="w-full md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl ml-4 md:ml-0 border-l-4 border-l-emerald-500">
+                            <div class="flex flex-wrap justify-between items-center mb-2">
+                                <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-slate-800 text-slate-300">1 Nov 2021 – 30 Jun 2022</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Senior System Analyst</h3>
+                            <p class="text-sm text-cyan-400 font-medium mb-3">Gofive Co., Ltd.</p>
+                            <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside mb-3">
+                                <li>Led Agile ceremonies (Refinement, Grooming, Sprint Reviews) and designed database & process flows.</li>
+                                <li>Authored API specs, conducted automated testing & verification with Postman, and performed code reviews.</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-950 text-emerald-200">Venio CRM</span>
+                                <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-950 text-emerald-200">Empeo HRM</span>
+                                <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-950 text-emerald-200">Warranty / PO / SO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 5: Frontis Company -->
+                    <div class="relative flex items-center md:justify-between group">
+                        <div class="flex items-center justify-center w-9 h-9 rounded-full bg-purple-600 text-white font-bold text-xs shadow-lg shrink-0 z-10 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div class="w-full md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl ml-4 md:ml-0 border-l-4 border-l-purple-500">
+                            <div class="flex flex-wrap justify-between items-center mb-2">
+                                <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-slate-800 text-slate-300">1 Sep 2020 – 30 Mar 2021</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Senior Manager</h3>
+                            <p class="text-sm text-cyan-400 font-medium mb-3">Frontis Company</p>
+                            <p class="text-xs text-slate-300 mb-2">Managed sprint teams, roadmap execution, risk analysis, code reviews, and established Robot Framework testing guidelines.</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-[10px] px-2 py-0.5 rounded bg-purple-950 text-purple-200">SEC Case Management</span>
+                                <span class="text-[10px] px-2 py-0.5 rounded bg-purple-950 text-purple-200">SEC Ongoing Touchpoint</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 6: AR-Soft Co., Ltd. -->
+                    <div class="relative flex items-center md:justify-between group">
+                        <div class="flex items-center justify-center w-9 h-9 rounded-full bg-indigo-600 text-white font-bold text-xs shadow-lg shrink-0 z-10 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div class="w-full md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl ml-4 md:ml-0 border-l-4 border-l-indigo-500">
+                            <div class="flex flex-wrap justify-between items-center mb-2">
+                                <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-slate-800 text-slate-300">1 Sep 2019 – 31 Aug 2020</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">.NET Technical Leader</h3>
+                            <p class="text-sm text-cyan-400 font-medium mb-3">AR-Soft Co., Ltd.</p>
+                            <p class="text-xs text-slate-300 mb-2">Established dev baselines (SonarQube, GitLab, Jenkins, xUnit), coached team on .NET Core, and architected ACMO V1 (API Core) & ASale SPVI.</p>
+                        </div>
+                    </div>
+
+                    <!-- Collapse / Expand Earlier Experience -->
+                    <div class="text-center pt-4">
+                        <button onclick="toggleEarlierExp()" id="toggleExpBtn" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-slate-700 text-xs font-semibold transition inline-flex items-center">
+                            <i class="fa-solid fa-clock-rotate-left mr-2"></i> View Earlier Work History (2008 – 2019 / 8 Companies)
+                        </button>
+                    </div>
+
+                    <!-- Earlier Experiences Container (Hidden by Default) -->
+                    <div id="earlierExp" class="hidden space-y-6 pt-4">
+                        <!-- Krungsri Nimble -->
+                        <div class="glass-card p-5 rounded-xl border border-slate-800">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-sm text-white">C# Developer (Contract) - Krungsri (Nimble)</h4>
+                                <span class="text-xs text-slate-400">Feb 2019 - Aug 2019</span>
+                            </div>
+                            <p class="text-xs text-slate-300 mt-1">Developed Angular 7.0, Web APIs, and .NET Core Microservices.</p>
+                        </div>
+
+                        <!-- Talent Placement -->
+                        <div class="glass-card p-5 rounded-xl border border-slate-800">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-sm text-white">C# Developer (Outsource) - Talent Placement (Onsite Kiatnakin & DTAC)</h4>
+                                <span class="text-xs text-slate-400">Jan 2017 - May 2018</span>
+                            </div>
+                            <p class="text-xs text-slate-300 mt-1">Maintained CIS system (ASP.NET MVC, Oracle) at Kiatnakin Bank and built Web Planner (AngularJS) at DTAC.</p>
+                        </div>
+
+                        <!-- ASC Group -->
+                        <div class="glass-card p-5 rounded-xl border border-slate-800">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-sm text-white">Automation Engineer - ASC Group (Onsite Thomson Reuters)</h4>
+                                <span class="text-xs text-slate-400">Apr 2016 - Aug 2016</span>
+                            </div>
+                            <p class="text-xs text-slate-300 mt-1">Automated test suites with NUnit, White Framework, and EggPlant; integrated with Jenkins & Jira.</p>
+                        </div>
+
+                        <!-- AR-Soft Senior Programmer -->
+                        <div class="glass-card p-5 rounded-xl border border-slate-800">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-sm text-white">Senior Programmer (.NET) - AR-Soft Co., Ltd.</h4>
+                                <span class="text-xs text-slate-400">Aug 2014 - Apr 2016</span>
+                            </div>
+                            <p class="text-xs text-slate-300 mt-1">Developed C#.NET applications, RESTful APIs with MVC4, and ARIS SALE (SPVI) systems.</p>
+                        </div>
+
+                        <!-- Cube Softtech -->
+                        <div class="glass-card p-5 rounded-xl border border-slate-800">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-sm text-white">Dotnet Technical Leader & Senior Programmer - Cube Softtech</h4>
+                                <span class="text-xs text-slate-400">May 2011 - Jan 2014</span>
+                            </div>
+                            <p class="text-xs text-slate-300 mt-1">Led team delivering V-Smart NPA (GSB Bank), HR-Payroll, and Microink Easy Design.</p>
+                        </div>
+
+                        <!-- Icesolution & Bangkok Screen -->
+                        <div class="glass-card p-5 rounded-xl border border-slate-800">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-sm text-white">Programmer - Icesolution & Bangkok Screen</h4>
+                                <span class="text-xs text-slate-400">2008 - 2011</span>
+                            </div>
+                            <p class="text-xs text-slate-300 mt-1">Career start using C#, PHP Zend Framework, iDoc Healthcare, and MRP Production Systems.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- KEY PROJECTS HIGHLIGHTS -->
+        <section id="projects" class="py-12 bg-slate-900/80 border-t border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <div class="inline-flex items-center space-x-2 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-trophy"></i> Key Accomplishments
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold">Featured Major Projects</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <!-- Project Card 1 -->
+                    <div class="glass-card p-6 rounded-2xl border-t-2 border-t-blue-500">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold mb-4">
+                            01
+                        </div>
+                        <h3 class="font-bold text-base text-white mb-1">TTB Banking System (Bizone)</h3>
+                        <p class="text-xs text-cyan-400 font-medium mb-3">TMBThanachart Bank (TTB)</p>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            Led architecture design for core corporate banking services including Stop-cheque, Cash Withdrawal, Lumpsum, QR/EDC Reports, and Online Cheque Book Request.
+                        </p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Clean Arch</span>
+                            <span class="text-[10px] px-2.5 py-0.5 rounded bg-slate-800 text-slate-300">Microservices</span>
+                            <span class="text-[10px] px-2.5 py-0.5 rounded bg-slate-800 text-slate-300">Scrum Master</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="glass-card p-6 rounded-2xl border-t-2 border-t-cyan-400">
+                        <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center font-bold mb-4">
+                            02
+                        </div>
+                        <h3 class="font-bold text-base text-white mb-1">TungNern Platform</h3>
+                        <p class="text-xs text-cyan-400 font-medium mb-3">Krungthai Bank / Accenture</p>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            Designed application architecture, database schemas, and technical specs for TungNern Credit Card, Web Admin, and Portal.
+                        </p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">API First</span>
+                            <span class="text-[10px] px-2.5 py-0.5 rounded bg-slate-800 text-slate-300">High Solution Spec</span>
+                            <span class="text-[10px] px-2.5 py-0.5 rounded bg-slate-800 text-slate-300">DB Design</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="glass-card p-6 rounded-2xl border-t-2 border-t-emerald-400">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold mb-4">
+                            03
+                        </div>
+                        <h3 class="font-bold text-base text-white mb-1">Enterprise CRM & HRM Platforms</h3>
+                        <p class="text-xs text-cyan-400 font-medium mb-3">Gofive Co., Ltd.</p>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            Analyzed business processes and delivered Venio CRM, Empeo HRM, Warranty Tracking, PO/SO, and API integrations.
+                        </p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Venio CRM</span>
+                            <span class="text-[10px] px-2.5 py-0.5 rounded bg-slate-800 text-slate-300">Empeo HRM</span>
+                            <span class="text-[10px] px-2.5 py-0.5 rounded bg-slate-800 text-slate-300">Postman QA</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EDUCATION & CERTIFICATIONS -->
+        <section id="education" class="py-12 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <!-- Education Column -->
+                    <div class="glass-card p-6 sm:p-8 rounded-2xl">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center">
+                                <i class="fa-solid fa-graduation-cap text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Education History</h3>
+                                <p class="text-xs text-slate-400">Master's and Bachelor's Degrees</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="border-l-2 border-l-blue-500 pl-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-cyan-400 font-semibold">2011 – 2014</span>
+                                    <span class="px-2 py-0.5 rounded bg-blue-950 text-blue-300 text-xs font-bold">GPA 3.55</span>
+                                </div>
+                                <h4 class="font-bold text-base text-white mt-1">Master of Business Administration (MBA-OGM)</h4>
+                                <p class="text-xs text-slate-300">King Mongkut's University of Technology Thonburi (KMUTT)</p>
+                            </div>
+
+                            <div class="border-l-2 border-l-cyan-500 pl-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-cyan-400 font-semibold">2004 – 2008</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-bold">GPA 2.82</span>
+                                </div>
+                                <h4 class="font-bold text-base text-white mt-1">Bachelor of Business Administration (Business Computer)</h4>
+                                <p class="text-xs text-slate-300">Siam University</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificates Column -->
+                    <div class="glass-card p-6 sm:p-8 rounded-2xl">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                                <i class="fa-solid fa-certificate text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Certificates & Learning</h3>
+                                <p class="text-xs text-slate-400">Continuous Professional Development</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 flex items-start space-x-3">
+                                <i class="fa-solid fa-award text-amber-400 text-xl mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Advance C# Programming</h4>
+                                    <p class="text-xs text-slate-400">From Future Skill (Earned: 08/02/2023)</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 flex items-start space-x-3">
+                                <i class="fa-solid fa-award text-amber-400 text-xl mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Agile Process Efficiency Enhancement</h4>
+                                    <p class="text-xs text-slate-400">From Future Skill (Earned: 08/02/2023)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Banner -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center sm:flex sm:justify-between sm:items-center">
+            <div class="mb-4 sm:mb-0">
+                <p class="text-sm font-bold text-white">Napawarid Charoenprasertkul</p>
+                <p class="text-xs text-slate-400">Tech Lead & Solution Architect | 18 Years Experience</p>
+            </div>
+            <div class="flex justify-center space-x-4 text-xs text-slate-400">
+                <a href="mailto:pro.it@windowslive.com" class="hover:text-cyan-400 transition"><i class="fa-solid fa-envelope mr-1"></i> pro.it@windowslive.com</a>
+                <a href="tel:0843548375" class="hover:text-cyan-400 transition"><i class="fa-solid fa-phone mr-1"></i> +66 84-354-8375</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions & Filtering Script -->
+    <script>
+        // Category Filter Function
+        function filterCategory(category) {
+            const cards = document.querySelectorAll('.skill-card');
+            const buttons = document.querySelectorAll('.skill-tab');
+
+            // Set active button UI
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-blue-600', 'text-white', 'shadow-md');
+                btn.classList.add('bg-slate-800', 'text-slate-300');
+            });
+
+            event.currentTarget.classList.remove('bg-slate-800', 'text-slate-300');
+            event.currentTarget.classList.add('active', 'bg-blue-600', 'text-white', 'shadow-md');
+
+            // Show / Hide Cards
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Live Search Filter Function
+        function filterSkills() {
+            const query = document.getElementById('skillSearch').value.toLowerCase();
+            const cards = document.querySelectorAll('.skill-card');
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Earlier Work Experience Toggle
+        function toggleEarlierExp() {
+            const expDiv = document.getElementById('earlierExp');
+            const btn = document.getElementById('toggleExpBtn');
+            if (expDiv.classList.contains('hidden')) {
+                expDiv.classList.remove('hidden');
+                btn.innerHTML = '<i class="fa-solid fa-chevron-up mr-2"></i> Hide Earlier Work History';
+            } else {
+                expDiv.classList.add('hidden');
+                btn.innerHTML = '<i class="fa-solid fa-clock-rotate-left mr-2"></i> View Earlier Work History (2008 – 2019 / 8 Companies)';
+            }
+        }
+
+        // Initialize Chart.js Radar Skill Metrics on Load
+        window.onload = function() {
+            const ctx = document.getElementById('skillRadarChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        '.NET & C# Core',
+                        'Software Architecture',
+                        'Database & ETL',
+                        'Agile & Squad Management',
+                        'DevOps & Cloud',
+                        'Testing & QA Automation',
+                        'AI Engineering'
+                    ],
+                    datasets: [{
+                        label: 'Skill Proficiency Rating',
+                        data: [95, 92, 88, 90, 82, 80, 85],
+                        backgroundColor: 'rgba(37, 99, 235, 0.25)',
+                        borderColor: '#38bdf8',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#06b6d4',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#06b6d4'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                            pointLabels: {
+                                color: '#cbd5e1',
+                                font: { size: 10, family: 'Inter' }
+                            },
+                            ticks: {
+                                display: false,
+                                max: 100,
+                                min: 0
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
 </html>
